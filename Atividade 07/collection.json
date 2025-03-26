@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "Vendedor Service",
+    "description": "Coleção de endpoints da API VendedorService",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Teste",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/jakarta-app/api/vendedores/teste",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jakarta-app", "api", "vendedores", "teste"]
+        }
+      }
+    },
+    {
+      "name": "Vendedores sem pedidos por cliente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/jakarta-app/api/vendedores/semPedidos/{cliente}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jakarta-app", "api", "vendedores", "semPedidos", ":cliente"],
+          "variable": [
+            {
+              "key": "cliente",
+              "value": "Samsonic"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Adicionar asterisco",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/jakarta-app/api/vendedores/adicionarAsterisco",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jakarta-app", "api", "vendedores", "adicionarAsterisco"]
+        }
+      }
+    },
+    {
+      "name": "Excluir por cidade",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/jakarta-app/api/vendedores/excluirPorCidade/{cidade}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jakarta-app", "api", "vendedores", "excluirPorCidade", ":cidade"],
+          "variable": [
+            {
+              "key": "cidade",
+              "value": "Jackson"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Total de vendas por vendedor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/jakarta-app/api/vendedores/totalVendas",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jakarta-app", "api", "vendedores", "totalVendas"]
+        }
+      }
+    }
+  ]
+}

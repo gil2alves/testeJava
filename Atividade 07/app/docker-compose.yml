@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  wildfly:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+      - "9990:9990"  # Porta do console administrativo (opcional)
+    volumes:
+      - ./target/jakarta-app.war:/opt/jboss/wildfly/standalone/deployments/jakarta-app.war
+

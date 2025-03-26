@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="myPU" transaction-type="JTA">
+        <!-- DataSource configurado em DatabaseConfig -->
+        <jta-data-source>java:app/jdbc/h2DS</jta-data-source>
+
+        <!-- Entidades JPA -->
+        <class>com.empresa.entity.Vendedor</class>
+        <class>com.empresa.entity.Pedido</class>
+        <class>com.empresa.entity.Cliente</class>
+
+        <properties>
+            <!-- Geração automática do schema -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+            <!-- Habilita log SQL -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+
+            <!-- Permite acesso ao console via navegador -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>

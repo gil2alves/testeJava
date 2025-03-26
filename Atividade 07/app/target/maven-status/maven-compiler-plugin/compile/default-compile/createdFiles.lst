@@ -1,0 +1,8 @@
+com\empresa\entity\Pedido.class
+com\empresa\config\ApplicationConfig.class
+com\empresa\config\DatabaseConfig.class
+com\empresa\config\DataInitializer.class
+com\empresa\entity\Vendedor.class
+com\empresa\repository\VendedorRepository.class
+com\empresa\entity\Cliente.class
+com\empresa\service\VendedorService.class
