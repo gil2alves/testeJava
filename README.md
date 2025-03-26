@@ -90,6 +90,11 @@ Para importar:
    - `DELETE /excluirPorCidade/{cidade}` → http://localhost:8080/jakarta-app/api/vendedores/excluirPorCidade/Jackson
    - `GET /totalVendas` → http://localhost:8080/jakarta-app/api/vendedores/totalVendas
 
+##### 🖼️ Exemplo de requisição
+Abaixo, um exemplo real de execução de requisição para o endpoint `semPedidos/{cliente}`:
+
+![Exemplo de execução no Postman](./Atividade%2007/assets/exemplo-sem-pedidos.png)
+
 ---
 
 ### [Atividade 08](./Atividade%2008)
