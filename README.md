@@ -48,6 +48,44 @@ Com base nas tabelas fornecidas:
 - c) Excluir vendedores que fizeram pedidos para a cidade *Jackson*  
 - d) Mostrar total de vendas por vendedor, exibindo zero quando aplicável
 
+Além das consultas SQL, foi desenvolvida uma API REST em Jakarta EE com endpoints que executam essas funcionalidades. O projeto está empacotado como um `.war` e executado em um container Docker com WildFly.
+
+#### 🚀 Executando o container WildFly
+Para rodar a aplicação via Docker:
+
+1. Certifique-se de que o `.war` já existe na pasta `target/` (ex: após clonar ou baixar o projeto):
+```bash
+ls target/jakarta-app.war
+```
+
+2. Suba o container com Docker Compose:
+```bash
+docker-compose up --build
+```
+
+> 💡 Não é necessário compilar novamente com `mvn clean package` se o arquivo `.war` já estiver presente em `target/`.
+
+3. A aplicação estará disponível em: [http://localhost:8080/jakarta-app](http://localhost:8080/jakarta-app)
+
+4. Acesse o endpoint de teste para verificar se está rodando:
+```http
+GET http://localhost:8080/jakarta-app/api/vendedores/teste
+```
+
+#### 📬 Importando os Endpoints no Postman
+Na pasta `Atividade 07`, foi disponibilizado o arquivo `vendedor-service-collection.json` que contém todos os endpoints REST em formato de *collection Postman*.
+
+Para importar:
+1. Abra o Postman
+2. Clique em **Import** > **Upload File**
+3. Selecione o arquivo `vendedor-service-collection.json`
+4. A coleção aparecerá com os seguintes endpoints:
+   - `/teste`
+   - `/semPedidos/{cliente}`
+   - `/adicionarAsterisco`
+   - `/excluirPorCidade/{cidade}`
+   - `/totalVendas`
+
 ---
 
 ### [Atividade 08](./Atividade%2008)
