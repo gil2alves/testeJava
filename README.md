@@ -2,6 +2,8 @@
 
 Este repositório contém a resolução das 9 atividades propostas no teste para desenvolvedor Java. Cada atividade está documentada e implementada em sua respectiva pasta.
 
+> ⚠️ **Observação**: A Atividade 07 contém um projeto completo em Jakarta EE que pode ser executado diretamente com Docker. Confira os detalhes na seção da [Atividade 07](#atividade-07).
+
 ## 📁 Atividades
 
 ### [Atividade 01](./Atividade%2001)
@@ -50,7 +52,7 @@ Com base nas tabelas fornecidas:
 
 Além das consultas SQL, foi desenvolvida uma API REST em Jakarta EE com endpoints que executam essas funcionalidades. O projeto está empacotado como um `.war` e executado em um container Docker com WildFly.
 
-O projeto da API está localizado em `./Atividade 07/app`.
+O projeto da API está localizado em [`./Atividade 07/app`](./Atividade%2007/app).
 
 #### 🚀 Executando o container WildFly
 Para rodar a aplicação via Docker:
@@ -81,12 +83,12 @@ Para importar:
 1. Abra o Postman
 2. Clique em **Import** > **Upload File**
 3. Selecione o arquivo `vendedor-service-collection.json`
-4. A coleção aparecerá com os seguintes endpoints:
-   - `/teste`
-   - `/semPedidos/{cliente}`
-   - `/adicionarAsterisco`
-   - `/excluirPorCidade/{cidade}`
-   - `/totalVendas`
+4. A coleção aparecerá com os seguintes endpoints (base URL: `http://localhost:8080/jakarta-app/api/vendedores`):
+   - `GET /teste` → http://localhost:8080/jakarta-app/api/vendedores/teste
+   - `GET /semPedidos/{cliente}` → http://localhost:8080/jakarta-app/api/vendedores/semPedidos/Samsonic
+   - `PUT /adicionarAsterisco` → http://localhost:8080/jakarta-app/api/vendedores/adicionarAsterisco
+   - `DELETE /excluirPorCidade/{cidade}` → http://localhost:8080/jakarta-app/api/vendedores/excluirPorCidade/Jackson
+   - `GET /totalVendas` → http://localhost:8080/jakarta-app/api/vendedores/totalVendas
 
 ---
 
