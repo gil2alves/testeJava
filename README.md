@@ -50,6 +50,8 @@ Com base nas tabelas fornecidas:
 
 Além das consultas SQL, foi desenvolvida uma API REST em Jakarta EE com endpoints que executam essas funcionalidades. O projeto está empacotado como um `.war` e executado em um container Docker com WildFly.
 
+O projeto da API está localizado em `./Atividade 07/app`.
+
 #### 🚀 Executando o container WildFly
 Para rodar a aplicação via Docker:
 
